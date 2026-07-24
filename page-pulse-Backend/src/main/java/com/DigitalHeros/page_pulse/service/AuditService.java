@@ -74,8 +74,11 @@ public class AuditService {
             throw e;
         }
         catch (Exception e) {
+
+            e.printStackTrace();
+
             throw new RuntimeException(
-                    "Unable to analyze URL");
+                    "Unable to analyze URL: " + e.getMessage());
         }
 
     }
