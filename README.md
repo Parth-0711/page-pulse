@@ -1,21 +1,21 @@
 # Page Pulse
 
-A web application that analyzes webpages and provides SEO insights.
+A lightweight SEO auditing tool built with Spring Boot and React.
 
 ## Features
 
-- URL analysis
-- Response time measurement
-- Page title extraction
-- H1 count
-- Missing alt tag detection
-- Word count
-- Error handling for invalid URLs and non-HTML content
+- URL Validation
+- Response Time Measurement
+- HTTP Status Detection
+- Page Title Extraction
+- H1 Count
+- Missing Alt Tag Detection
+- Word Count
 
 ## Tech Stack
 
 ### Backend
-- Java 21
+- Java 17
 - Spring Boot
 - Jsoup
 
@@ -24,15 +24,13 @@ A web application that analyzes webpages and provides SEO insights.
 - Vite
 - Axios
 
-## Run Backend
+## API
 
-```bash
-mvn spring-boot:run
-```
+### POST /api/analyze
 
-## Run Frontend
+Request:
 
-```bash
-npm install
-npm run dev
-```
+```json
+{
+  "url": "https://example.com"
+}
